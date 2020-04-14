@@ -33,3 +33,5 @@ def product(request):
         user = Sale.objects.create(medicine_name=m,price=pr, discount=dis, quantity=qn)
         return user.save()
 
+
+

@@ -55,7 +55,6 @@
                       <ul class="dropdown-menu">
                         <li><a href="masters#client">Client Master</a></li>
                         <li><a href="masters#item">Item Master</a></li>
-
                       </ul>
                 </li>
 				<li class="dropdown">
@@ -69,7 +68,9 @@
                       </ul>
                 </li>
 
+                <li><a href="reports">Reports</a></li>
 				<li><a href="contact.html">Contact</a></li>
+
 				<li><a href="elements.html">Elements</a></li>
 
 
@@ -116,7 +117,11 @@
                     <form action=" " method="post">{% csrf_token %}
 
                         <label for="Medicine"><b>Medicine</b></label>
-                        <input type="text" placeholder="Enter Medicine" name="Medicine" required>
+                        <select id="medicine_name ">
+                             {% for i in dic %}
+                             <option value="i"> {{ i }} </option>
+                            {% endfor %}
+                    </select>
                         <label for="Quantity"><b>Quantity</b></label>
                         <input type="number" min="0" placeholder="Enter Medicine Quantity" name="Quantity" required>
 
@@ -131,27 +136,7 @@
                     </form>
                 </div>
             </div>
-
-            <div class="col">
-				<div class="container1">
-					<!-- single card -->
-
-                    <form  action="">
-
-
-
-
-                    </form>
-                </div>
-
-
-            </div>
         </div>
-        <br>
-        <br>
-		<!-- card section end-->
-
-
 	</div>
 	<!-- About section end -->
 
@@ -194,22 +179,21 @@
 					<p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. </p>
 					<h3 class="mt60">Main Office</h3>
 					<p class="con-item">C/ Libertad, 34 <br> 05200 Arévalo </p>
-					<p class="con-item">0034 37483 2445 322</p>
-					<p class="con-item">hello@company.com</p>
+
 				</div>
 				<!-- contact form -->
 				<div class="col-md-6 col-pull">
 					<form class="form-class" id="con_form">
 						<div class="row">
-							<div class="col-sm-6">
-								<input type="text" name="name" placeholder="Your name">
-							</div>
-							<div class="col-sm-6">
-								<input type="text" name="email" placeholder="Your email">
-							</div>
+
 							<div class="col-sm-12">
-								<input type="text" name="subject" placeholder="Subject">
-								<textarea name="message" placeholder="Message"></textarea>
+
+                                <label for="Medicine"><b>Medicine</b></label>
+                                <input type="text" placeholder="Enter Medicine" name="Medicine" required>
+
+                                <label for="Medicine"><b>Medicine</b></label>
+                                <input type="text" placeholder="Enter Medicine" name="Medicine" required>
+
 								<button class="site-btn">send</button>
 							</div>
 						</div>

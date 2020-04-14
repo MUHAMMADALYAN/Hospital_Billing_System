@@ -72,15 +72,10 @@
 	</div>
 	<!-- Page header end-->
 
-
-
-
-	<div  class="about-section" style="background-color:#FFFFFF">
-		<!-- card section -->
-        <br>
-        <br>
-            <div id="sales_record" class="centre-card">
-                 <h1 align="center">List of all Medicines Sold</h1>
+     <div id="sales_record" class="services-section spad" style="background-color:#FFFFFF ">
+		<div class="container">
+            <div  class="centre-card">
+                <h1 align="center">List of all Medicines Sold</h1>
                 <table>
                     <tr>
                         <th>Medicine Name</th>
@@ -94,7 +89,7 @@
                                 {{ m.medicine_name }}
                             </td>
                             <td>
-                            {{ m.price}}
+                                {{ m.price}}
                             </td>
                             <td>
                                 {{ m.quantity}}
@@ -102,72 +97,59 @@
                             <td>
                                 {{ m.discount}}
                             </td>
-                            </tr>
-                            {% endfor %}
-                            <tr> </tr>
-                            <tr>
-                            </tr>
-                            </table>
-                            <h3 align="center">Total Sell Price is {{ total }} </h3>
-                    </div>
-             <br>
-            <br>
-            <br>
+                        </tr>
+                    {% endfor %}
+                </table>
+                <h3 align="center">Total Sell Price is {{ total }} </h3>
             </div>
+        </div>
+     </div>
 
 
-    <div  class="about-section" style="background-color:#2be6ab">
-        <br>
-        <br>
-        <br>
-        <div id="client_record" class="centre-card">
-                 <h1 align="center">List of all Clients</h1>
-                <table>
-                    <tr>
-                        <th>Client Name</th>
-                        <th>Address</th>
-                        <th>Phone Number</th>
-                        <th>Discount</th>
-                        <th>Email</th>
-                    </tr>
-                    {% for p in allclients %}
+     <div id="client_record" class="services-section spad" style="background-color:#2be6ab">
+		<div  class="container">
+            <div  class="row">
+                <div  class="centre-card">
+                    <h1 align="center">List of all Clients</h1>
+                    <table>
                         <tr>
-                            <td>
-                                {{ p.name }}
-                            </td>
-                            <td>
-                            {{ p.Address}}
-                            </td>
-                            <td>
-                                {{ p.Phone}}
-                            </td>
-                            <td>
-                                {{ p.Discount}}
-                            </td>
-                             <td>
-                                {{ p.Email}}
-                            </td>
-                            </tr>
-                            {% endfor %}
-                            <tr> </tr>
+                            <th>Client Name</th>
+                            <th>Address</th>
+                            <th>Phone Number</th>
+                            <th>Discount</th>
+                            <th>Email</th>
+                        </tr>
+                        {% for p in allclients %}
                             <tr>
+                                <td>
+                                    {{ p.name }}
+                                </td>
+                                <td>
+                                {{ p.Address}}
+                                </td>
+                                <td>
+                                    {{ p.Phone}}
+                                </td>
+                                <td>
+                                    {{ p.Discount}}
+                                </td>
+                                 <td>
+                                    {{ p.Email}}
+                                </td>
                             </tr>
-                            </table>
+                                {% endfor %}
+                    </table>
+                </div>
+             </div>
+        </div>
+     </div>
 
-                    </div>
-         <br>
-        <br>
-        <br>
 
 
-    </div>
-
-    <div  class="about-section" style="background-color:#FFFFFF">
-        <br>
-        <br>
-        <br>
-        <div id="item_record" class="centre-card">
-                 <h1 align="center">Stock of all Medicines</h1>
+     <div id="item_record" class="services-section spad" style="background-color:#FFFFFF ">
+		<div class="container">
+            <div  class="centre-card">
+                <h1 align="center">Stock of all Medicines</h1>
                 <table>
                     <tr>
                         <th>Client Name</th>
@@ -198,27 +180,11 @@
                                 {{i.Tax_Rate}}
                             </td>
                             </tr>
-                            {% endfor %}
-                            <tr> </tr>
-                            <tr>
-                            </tr>
-                            </table>
-
-                    </div>
-         <br>
-        <br>
-        <br>
-
-
-    </div>
-
-
-
-
-
-
-
-
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+     </div>
 
 	<!-- Footer section -->
 	<footer class="footer-section">
@@ -229,12 +195,12 @@
     <style>
 
     table {
-
       border-collapse: separate;
       border-spacing: 0;
       width: 100%;
 
     }
+
 
     th, td {
       text-align: center;
@@ -252,7 +218,7 @@
 
         position: center;
         max-width: 800px;
-         margin-top: 50px;
+        margin-top: 50px;
         margin: auto;
         padding: 16px ;
 
