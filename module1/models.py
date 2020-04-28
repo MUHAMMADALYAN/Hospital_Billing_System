@@ -9,14 +9,13 @@ class Sale(models.Model):
     discount=models.PositiveIntegerField()
     quantity = models.PositiveIntegerField()
 
-class client(models.Model):
+class Client(models.Model):
     name=models.CharField(max_length=200)
     Adress= models.CharField(max_length=200)
     Phone=models.PositiveIntegerField()
-    Discount=models.PositiveIntegerField()
     Email= models.CharField(max_length=200)
 
-class item(models.Model):
+class Item(models.Model):
     party = models.CharField(max_length=200)
     Item=models.CharField(max_length=200)
     Rate=models.PositiveIntegerField()

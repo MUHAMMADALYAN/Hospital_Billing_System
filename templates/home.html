@@ -73,10 +73,6 @@
 
 				<li><a href="elements.html">Elements</a></li>
 
-
-
-
-
 			</ul>
 
 		</nav>
@@ -96,75 +92,12 @@
 		</div>
 		<!-- slider -->
 		<div id="hero-slider" class="owl-carousel">
-			<div class="item  hero-item" data-bg="{%static "img/h1.jpg"%}"></div>
+			<div class="item  hero-item" data-bg="{%static "img/h2.jpg"%}"></div>
 
 		</div>
 	</div>
 	<!-- Intro Section -->
 
-
-	<!-- About section -->
-    <div class="overlay"></div>
-	<div class="about-section">
-		<!-- card section -->
-        <br>
-        <br>
-		<div class="col-container">
-			<div class="col">
-				<div class="container1">
-					<!-- single card -->
-
-                    <form action=" " method="post">{% csrf_token %}
-
-                        <label for="Medicine"><b>Medicine</b></label>
-                        <select id="medicine_name ">
-                             {% for i in dic %}
-                             <option value="i"> {{ i }} </option>
-                            {% endfor %}
-                    </select>
-                        <label for="Quantity"><b>Quantity</b></label>
-                        <input type="number" min="0" placeholder="Enter Medicine Quantity" name="Quantity" required>
-
-                        <label for="Price"><b>Price</b></label>
-                        <input type="number" min="0" placeholder="Enter Price" name="Price" required>
-
-                        <label for="Discount"><b>Discount</b></label>
-                        <input type="number" min="0" placeholder="Enter Discount" name="Discount" required>
-                        <hr>
-
-                        <input type="submit" value="Submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-	</div>
-	<!-- About section end -->
-
-
-
-
-
-
-
-
-
-	<!-- Promotion section -->
-	<div class="promotion-section">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-9">
-					<h2>Are you ready to stand out?</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo est.</p>
-				</div>
-				<div class="col-md-3">
-					<div class="promo-btn-area">
-						<a href="" class="site-btn btn-2">Browse</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Promotion section end-->
 
 
 	<!-- Contact section -->
@@ -174,30 +107,40 @@
 				<!-- contact info -->
 				<div class="col-md-5 col-md-offset-1 contact-info col-push">
 					<div class="section-title left">
-						<h2>Contact us</h2>
+						<h2>Medicine DataBase</h2>
 					</div>
-					<p>Cras ex mauris, ornare eget pretium sit amet, dignissim et turpis. Nunc nec maximus dui, vel suscipit dolor. Donec elementum velit a orci facilisis rutrum. </p>
-					<h3 class="mt60">Main Office</h3>
-					<p class="con-item">C/ Libertad, 34 <br> 05200 Arévalo </p>
-
+					<h3 class="mt60">Enter Medicine Details</h3>
 				</div>
 				<!-- contact form -->
 				<div class="col-md-6 col-pull">
-					<form class="form-class" id="con_form">
+
 						<div class="row">
 
 							<div class="col-sm-12">
+                                <form action=" " method="post">{% csrf_token %}
 
-                                <label for="Medicine"><b>Medicine</b></label>
-                                <input type="text" placeholder="Enter Medicine" name="Medicine" required>
+                                    <label for="Medicine"><b>Medicine</b></label>
+                                    <select name="Medicine">
+                                         {% for i in dic %}
+                                         <option > {{ i }} </option>
+                                        {% endfor %}
+                                    </select>
+                                    <label for="Quantity"><b>Quantity</b></label>
+                                    <input type="number" min="0" placeholder="Enter Medicine Quantity" name="Quantity" required>
 
-                                <label for="Medicine"><b>Medicine</b></label>
-                                <input type="text" placeholder="Enter Medicine" name="Medicine" required>
+                                    <label for="Price"><b>Price</b></label>
+                                    <input type="number" min="0" placeholder="Enter Price" name="Price" required>
 
-								<button class="site-btn">send</button>
+                                    <label for="Discount"><b>Discount</b></label>
+                                    <input type="number" min="0" placeholder="Enter Discount" name="Discount" >
+                                    <hr>
+                                    <button class="site-btn" type="submit" >Submit</button>
+
+                                </form>
+
 							</div>
 						</div>
-					</form>
+
 				</div>
 			</div>
 		</div>
@@ -207,7 +150,7 @@
 
 	<!-- Footer section -->
 	<footer class="footer-section">
-		<h2>2017 All rights reserved. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></h2>
+		<h2 style="color: #FFFFFF">2020 All rights reserved. Designed by ALYAN TECHNOLOGIES</h2>
 	</footer>
 	<!-- Footer section end -->
 

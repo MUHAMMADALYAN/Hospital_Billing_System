@@ -49,8 +49,9 @@
 				<li><a href="home.html">Home</a></li>
 				<li class="active"><a href="masters">Masters</a></li>
 				<li><a href="datas">Datas</a></li>
+                <li><a href="reports">Reports</a></li>
 				<li><a href="contact.html">Contact</a></li>
-				<li><a href="elements.html">Elements</a></li>
+
 			</ul>
 		</nav>
 	</header>
@@ -90,16 +91,13 @@
 				    <label for="Name"><b>Party Name</b></label>
 				    <input type="text" placeholder="Enter Party Name" name="name" required>
 
-                        <label for="Address"><b>Address</b></label>
+                    <label for="Address"><b>Address</b></label>
 				    <input type="text"  placeholder="Enter Address" name="Address" required>
 
 				    <label for="Phone No"><b>Phone No</b></label>
 				    <input type="number" min="0" placeholder="Enter Phone No" name="Phone" required>
 
-				    <label for="Discount"><b>Discount</b></label>
-				    <input type="number" min="0" placeholder="Enter Discount" name="Discount" required>
-
-                        <label for="Email"><b>Email</b></label>
+                    <label for="Email"><b>Email</b></label>
 				    <input type="text"  placeholder="Enter Email" name="Email" required>
                         <hr>
                         <button class="site-btn mr20" type="submit" name="client_form">Save</button>
@@ -116,7 +114,7 @@
 			<div class="row">
                 <h1 id="item">Item Master</h1>
                 <p>Enter Item details </p>
-				 <form action="masters#tax" method="post">{% csrf_token %}
+				 <form action=" " method="post">{% csrf_token %}
 				    <div class="container">
 
 				    <hr>
@@ -135,10 +133,10 @@
 
 
                         <label for="Tax Name" ><b>Tax name</b></label>
-                        <input type="text"  placeholder="Enter Tax Name" name="Tax_Name" required>
+                        <input type="text"  placeholder="Enter Tax Name" name="Tax_Name" >
 
                         <label for="Rate" ><b>Rate</b></label>
-                        <input type="number" min="0" placeholder="Enter Rate" name="Tax_Rate" required>
+                        <input type="number" min="0" placeholder="Enter Rate" name="Tax_Rate" >
 
                         <hr>
 
@@ -167,7 +165,7 @@
 
 	<!-- Footer section -->
 	<footer class="footer-section">
-		<h2>2017 All rights reserved. Designed by <a href="https://colorlib.com" target="_blank">Colorlib</a></h2>
+		<h2 style="color: #FFFFFF">2020 All rights reserved. Designed by ALYAN TECHNOLOGIES</h2>
 	</footer>
 	<!-- Footer section end -->
 
